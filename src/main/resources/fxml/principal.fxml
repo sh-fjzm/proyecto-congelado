@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controlador.PrincipalController"
+            prefWidth="800" prefHeight="600">
+
+    <top>
+        <Label text="Buscador Empresas TIC"
+               BorderPane.alignment="CENTER"
+               style="-fx-font-size: 24px;"
+               maxWidth="Infinity"
+               alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+        </Label>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <ScrollPane fitToWidth="true" prefHeight="400">
+                <VBox fx:id="vboxEtiquetas" spacing="8">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="20" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Button text="Buscar" onAction="#onBuscar"/>
+            <Button text="Desmarcar Todo" onAction="#onDesmarcarTodo"/>
+        </HBox>
+    </bottom>
+</BorderPane>

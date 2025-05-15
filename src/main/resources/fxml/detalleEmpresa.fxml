@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controlador.DetalleEmpresaController"
+            prefWidth="600" prefHeight="500">
+
+    <!-- Top Section -->
+    <top>
+        <Label fx:id="nombreEmpresa" text="Nombre de la Empresa"
+               BorderPane.alignment="CENTER"
+               style="-fx-font-size: 20px;"
+               maxWidth="Infinity"
+               alignment="CENTER"/>
+    </top>
+
+    <!-- Center Section -->
+    <center>
+        <VBox fx:id="centerVBox" spacing="10">
+            <Label fx:id="lblDireccion" text="Dirección: " wrapText="true"/>
+            <Label fx:id="lblTelefono" text="Teléfono: "/>
+            <Label fx:id="lblEmail" text="Email: "/>
+            <Label fx:id="lblLinkedin" text="LinkedIn: "/>
+            <Label fx:id="lblEtiquetas" text="Etiquetas: " wrapText="true"/>
+        </VBox>
+    </center>
+
+    <!-- Bottom Section -->
+    <bottom>
+        <HBox alignment="CENTER">
+            <Button text="Volver" onAction="#onVolver"/>
+        </HBox>
+    </bottom>
+</BorderPane>

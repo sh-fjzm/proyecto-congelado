@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controlador.BusquedaController"
+            prefWidth="800" prefHeight="600">
+    <top>
+        <Label text="Resultados de la búsqueda"
+               BorderPane.alignment="CENTER"
+               style="-fx-font-size: 20px; -fx-padding: 20px;"
+               maxWidth="Infinity"
+               alignment="CENTER"/>
+    </top>
+
+    <center>
+        <ListView fx:id="listaResultados" prefHeight="450" />
+    </center>
+
+    <bottom>
+        <HBox spacing="20" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Button text="Ver Detalles" onAction="#onVerDetalles"/>
+            <Button text="Volver" onAction="#onVolver"/>
+        </HBox>
+    </bottom>
+</BorderPane>
